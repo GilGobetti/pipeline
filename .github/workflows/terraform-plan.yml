@@ -1,0 +1,21 @@
+name: terraform plan
+on: push
+env:
+  AWS_KEY: ${{secrets.AWS_KEY}}
+  AWS_KEY_PUB: ${{secrets.AWS_KEY_PUB}}
+
+jobs: 
+  terraform_plan: 
+    name: terraform plan
+    runs_on: ubuntu-latest
+    desfauts: 
+      run:
+        shell: bash
+    steps: 
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: terraform plan
+      run: 
+        terraform init
+        terraform validate
+        terraform plan  
