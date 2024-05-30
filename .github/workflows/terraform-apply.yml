@@ -1,8 +1,6 @@
 name: terraform apply
 on: workflow_dispatch
-env:
-  AWS_KEY: ${{secrets.AWS_KEY}}
-  AWS_KEY_PUB: ${{secrets.AWS_KEY_PUB}}
+
 
 jobs: 
   terraform_plan: 
