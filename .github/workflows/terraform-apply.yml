@@ -7,8 +7,8 @@ env:
 jobs: 
   terraform_plan: 
     name: terraform apply
-    runs_on: ubuntu-latest
-    desfauts: 
+    runs-on: ubuntu-latest
+    defaults: 
       run:
         shell: bash
     steps: 
